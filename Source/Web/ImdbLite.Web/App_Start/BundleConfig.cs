@@ -19,8 +19,10 @@ namespace ImdbLite.Web
         private static void RegisterStyleBundles(BundleCollection bundles)
         {
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/bootstrap.css"));
+
+            bundles.Add(new StyleBundle("~/Content/custom").Include(
+                "~/Content/site.css"));
         }
 
         private static void RegisterScriptBundles(BundleCollection bundles)
