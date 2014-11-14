@@ -22,7 +22,7 @@ namespace ImdbLite.Web
                       "~/Content/bootstrap.css"));
 
             bundles.Add(new StyleBundle("~/Content/custom").Include(
-                "~/Content/site.css"));
+                "~/Content/bootstrap.darkly.css"));
         }
 
         private static void RegisterScriptBundles(BundleCollection bundles)
