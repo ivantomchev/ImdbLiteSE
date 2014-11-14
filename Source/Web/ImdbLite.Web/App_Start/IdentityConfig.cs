@@ -12,6 +12,7 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using ImdbLite.Data.Models;
 using ImdbLite.Data;
+using ImdbLite.Data.Models.User;
 
 namespace ImdbLite.Web
 {

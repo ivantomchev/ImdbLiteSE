@@ -1,16 +1,16 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Web;
-using System.Web.Mvc;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.Owin;
-using Microsoft.Owin.Security;
-using ImdbLite.Data.Models;
-using ImdbLite.Web.ViewModels.Manage;
-
-namespace ImdbLite.Web.Controllers
+﻿namespace ImdbLite.Web.Controllers
 {
+    using System;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using System.Web;
+    using System.Web.Mvc;
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.Owin;
+    using Microsoft.Owin.Security;
+    using ImdbLite.Data.Models.User;
+    using ImdbLite.Web.ViewModels.Manage;
+
     [Authorize]
     public class ManageController : Controller
     {

@@ -1,4 +1,4 @@
-﻿namespace ImdbLite.Data.Models
+﻿namespace ImdbLite.Data.Models.User
 {
     using ImdbLite.Data.Common.Models;
     using System;

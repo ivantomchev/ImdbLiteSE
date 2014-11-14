@@ -2,7 +2,7 @@
 {
     using ImdbLite.Data.Common.Models;
     using ImdbLite.Data.Migrations;
-    using ImdbLite.Data.Models;
+    using ImdbLite.Data.Models.User;
     using Microsoft.AspNet.Identity.EntityFramework;
     using System;
     using System.Data.Entity;
