@@ -6,8 +6,8 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using ImdbLite.Web.Models;
 using ImdbLite.Data.Models;
+using ImdbLite.Web.ViewModels.Manage;
 
 namespace ImdbLite.Web.Controllers
 {
