@@ -1,0 +1,31 @@
+﻿@model IEnumerable<ImdbLite.Web.Areas.Administration.ViewModels.Actors.ActorViewModel>
+
+@{
+    ViewBag.Title = "Actors";
+}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h2 class="page-header">
+            @ViewBag.Title
+        </h2>
+        <ol class="breadcrumb">
+            <li>
+                @Html.ActionLink("Home", "Index", "Home")
+            </li>
+            <li class="active">@Html.ActionLink("Actors", "Index", "Actors")</li>
+        </ol>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        @Html.ActionLink("New Actor", "Create", "Actors", new { area = "Administration" }, new { data_modal = "", @class = "btn btn-default" })
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12" id="actors-list">
+        @Html.Partial("ActorsList",Model)
+    </div>
+</div>
