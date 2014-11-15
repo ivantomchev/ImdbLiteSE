@@ -1,8 +1,8 @@
-﻿
-using ImdbLite.Data.Models.Base;
-using System.Collections.Generic;
-namespace ImdbLite.Data.Models.Actor
+﻿namespace ImdbLite.Data.Models.Actor
 {
+    using System.Collections.Generic;
+    using ImdbLite.Data.Models.Base;
+    
     public class Actor : CastMember
     {
         private ICollection<ActorsComment> comments;
@@ -21,6 +21,7 @@ namespace ImdbLite.Data.Models.Actor
             {
                 return this.comments;
             }
+
             set
             {
                 this.comments = value;
@@ -33,6 +34,7 @@ namespace ImdbLite.Data.Models.Actor
             {
                 return this.photos;
             }
+
             set
             {
                 this.photos = value;

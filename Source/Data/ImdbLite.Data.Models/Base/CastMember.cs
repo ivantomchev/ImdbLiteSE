@@ -1,10 +1,10 @@
 ﻿namespace ImdbLite.Data.Models.Base
 {
-    using ImdbLite.Data.Common.Models;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using ImdbLite.Data.Common.Models;    
     using ImdbLite.Data.Models.Movie;
 
     public abstract class CastMember : IAuditInfo, IDeletableEntity
@@ -41,6 +41,7 @@
             {
                 return this.movies;
             }
+
             set
             {
                 this.movies = value;

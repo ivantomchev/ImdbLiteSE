@@ -1,7 +1,7 @@
 ﻿namespace ImdbLite.Data.Models.Producer
 {
-    using ImdbLite.Data.Models.Base;
     using System.Collections.Generic;
+    using ImdbLite.Data.Models.Base;
 
     public class Producer : CastMember
     {
@@ -21,6 +21,7 @@
             {
                 return this.comments;
             }
+
             set
             {
                 this.comments = value;
@@ -33,6 +34,7 @@
             {
                 return this.photos;
             }
+
             set
             {
                 this.photos = value;

@@ -1,9 +1,9 @@
 ﻿namespace ImdbLite.Data.Models.Base
 {
-    using ImdbLite.Data.Common.Models;
     using System;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using ImdbLite.Data.Common.Models;
 
     public abstract class Photo : IAuditInfo, IDeletableEntity
     {

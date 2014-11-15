@@ -1,7 +1,8 @@
-﻿
-namespace ImdbLite.Web.Areas.Administration.ViewModels.Actors
+﻿namespace ImdbLite.Web.Areas.Administration.ViewModels.Actors
 {
-    public class ActorViewModel
+    using ImdbLite.Web.Areas.Administration.ViewModels.Base;
+
+    public class ActorViewModel : CastMemberViewModel
     {
 
     }

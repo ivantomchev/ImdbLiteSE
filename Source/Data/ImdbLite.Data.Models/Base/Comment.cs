@@ -1,9 +1,9 @@
 ﻿namespace ImdbLite.Data.Models.Base
 {
-    using ImdbLite.Data.Common.Models;
-    using ImdbLite.Data.Models.User;
     using System;
     using System.ComponentModel.DataAnnotations.Schema;
+    using ImdbLite.Data.Common.Models;
+    using ImdbLite.Data.Models.User;
 
     public abstract class Comment : IAuditInfo, IDeletableEntity
     {

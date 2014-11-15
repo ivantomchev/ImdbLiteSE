@@ -1,12 +1,8 @@
-﻿using ImdbLite.Data.Models.Base;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ImdbLite.Data.Models.Director
+﻿namespace ImdbLite.Data.Models.Director
 {
+    using System.Collections.Generic;
+    using ImdbLite.Data.Models.Base;
+
     public class Director : CastMember
     {
         private ICollection<DirectorsComment> comments;
@@ -24,6 +20,7 @@ namespace ImdbLite.Data.Models.Director
             {
                 return this.comments;
             }
+
             set
             {
                 this.comments = value;
@@ -36,6 +33,7 @@ namespace ImdbLite.Data.Models.Director
             {
                 return this.photos;
             }
+
             set
             {
                 this.photos = value;

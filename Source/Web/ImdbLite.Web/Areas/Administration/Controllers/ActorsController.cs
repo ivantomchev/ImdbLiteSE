@@ -3,6 +3,8 @@
     using ImdbLite.Data.Common.Repository;
     using ImdbLite.Data.Models.Actor;
     using System.Web.Mvc;
+    using AutoMapper.QueryableExtensions;
+    using ImdbLite.Web.Areas.Administration.ViewModels.Actors;
 
     public class ActorsController : Controller
     {
@@ -16,7 +18,9 @@
         // GET: Administration/Actors
         public ActionResult Index()
         {
-            return View();
+            var data = this.actors.All().Project().To<ActorViewModel>();
+
+            return View(data);
         }
     }
 }

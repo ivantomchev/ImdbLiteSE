@@ -1,5 +1,8 @@
 ﻿namespace ImdbLite.Data
 {
+    using System;
+    using System.Data.Entity;
+    using System.Linq;
     using ImdbLite.Data.Common.Models;
     using ImdbLite.Data.Migrations;
     using ImdbLite.Data.Models.Actor;
@@ -10,11 +13,7 @@
     using ImdbLite.Data.Models.User;
     using ImdbLite.Data.Models.Writer;
     using Microsoft.AspNet.Identity.EntityFramework;
-    using System;
-    using System.Data.Entity;
-    using System.Linq;
-
-
+    
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()

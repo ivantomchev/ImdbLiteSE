@@ -5,8 +5,8 @@
     using System.ComponentModel.DataAnnotations;
     using ImdbLite.Data.Models.Actor;
     using ImdbLite.Data.Models.Director;
-    using ImdbLite.Data.Models.Producer;
     using ImdbLite.Data.Models.Genre;
+    using ImdbLite.Data.Models.Producer;
     using ImdbLite.Data.Models.Writer;
 
     public class Movie
@@ -19,7 +19,7 @@
 
         private ICollection<Actor> actors;
 
-        //private ICollection<Vote> votes;
+        ////private ICollection<Vote> votes;
 
         private ICollection<MoviesPhoto> photos;
 
@@ -31,7 +31,7 @@
             this.producedBy = new HashSet<Producer>();
             this.writtenBy = new HashSet<Writer>();
             this.actors = new HashSet<Actor>();
-            //this.votes = new HashSet<Vote>();
+            ////this.votes = new HashSet<Vote>();
             this.photos = new HashSet<MoviesPhoto>();
             this.comments = new HashSet<MoviesComment>();
         }
@@ -58,6 +58,7 @@
             {
                 return this.photos;
             }
+
             set
             {
                 this.photos = value;
@@ -72,6 +73,7 @@
             {
                 return this.genres;
             }
+
             set
             {
                 this.genres = value;
@@ -86,6 +88,7 @@
             {
                 return this.producedBy;
             }
+
             set
             {
                 this.producedBy = value;
@@ -98,6 +101,7 @@
             {
                 return this.writtenBy;
             }
+
             set
             {
                 this.writtenBy = value;
@@ -110,23 +114,24 @@
             {
                 return this.actors;
             }
+
             set
             {
                 this.actors = value;
             }
         }
 
-        //public virtual ICollection<Vote> Votes
-        //{
-        //    get
-        //    {
-        //        return this.votes;
-        //    }
-        //    set
-        //    {
-        //        this.votes = value;
-        //    }
-        //}
+        ////public virtual ICollection<Vote> Votes
+        ////{
+        ////    get
+        ////    {
+        ////        return this.votes;
+        ////    }
+        ////    set
+        ////    {
+        ////        this.votes = value;
+        ////    }
+        ////}
 
         public virtual ICollection<MoviesComment> Comments
         {
@@ -134,6 +139,7 @@
             {
                 return this.comments;
             }
+
             set
             {
                 this.comments = value;

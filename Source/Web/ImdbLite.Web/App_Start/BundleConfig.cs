@@ -27,6 +27,9 @@ namespace ImdbLite.Web
 
         private static void RegisterScriptBundles(BundleCollection bundles)
         {
+            bundles.Add(new ScriptBundle("~/bundles/modal").Include(
+                        "~/Scripts/Modal/modalform.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 

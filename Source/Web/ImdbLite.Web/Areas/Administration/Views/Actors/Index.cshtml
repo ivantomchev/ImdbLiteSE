@@ -4,6 +4,14 @@
     ViewBag.Title = "Actors";
 }
 
+<div id='myModal' class='modal fade in'>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div id='myModalContent'></div>
+        </div>
+    </div>
+</div>
+
 <div class="row">
     <div class="col-lg-12">
         <h2 class="page-header">
@@ -26,6 +34,8 @@
 
 <div class="row">
     <div class="col-lg-12" id="actors-list">
-        @Html.Partial("ActorsList",Model)
+        @Html.Partial("_ActorsListPartial",Model)
     </div>
 </div>
+
+@Scripts.Render()

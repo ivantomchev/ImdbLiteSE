@@ -1,6 +1,4 @@
-﻿
-
-namespace ImdbLite.Data.Models.Producer
+﻿namespace ImdbLite.Data.Models.Producer
 {
     using ImdbLite.Data.Models.Base;
 

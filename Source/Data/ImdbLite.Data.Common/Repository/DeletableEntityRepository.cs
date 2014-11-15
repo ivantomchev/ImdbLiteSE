@@ -1,10 +1,10 @@
 ﻿namespace ImdbLite.Data.Common.Repository
 {
-    using ImdbLite.Data.Common.Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     using System.Linq;
+    using ImdbLite.Data.Common.Models;
 
     public class DeletableEntityRepository<T> : GenericRepository<T>, IDeletableEntityRepository<T>
         where T : class, IDeletableEntity
