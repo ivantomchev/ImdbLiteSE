@@ -13,6 +13,7 @@ namespace ImdbLite.Web.App_Start
     using System.Data.Entity;
     using ImdbLite.Data;
     using ImdbLite.Data.Common.Repository;
+    using ImdbLite.Data.Models.Actor;
 
     public static class NinjectWebCommon
     {
@@ -66,7 +67,7 @@ namespace ImdbLite.Web.App_Start
         {
             kernel.Bind<DbContext>().To<ApplicationDbContext>();
 
-
+            kernel.Bind(typeof(IRepository<Actor>)).To(typeof(DeletableEntityRepository<Actor>));
 
             kernel.Bind(typeof(IDeletableEntityRepository<>)).To(typeof(DeletableEntityRepository<>));
 
