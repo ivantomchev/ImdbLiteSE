@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ImdbLite.Data.Common.Repository;
+using ImdbLite.Data.Models.Actor;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
