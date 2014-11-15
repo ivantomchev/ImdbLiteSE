@@ -1,0 +1,26 @@
+﻿@model IEnumerable<ImdbLite.Web.Areas.Administration.ViewModels.Actors.ActorViewModel>
+
+@foreach (var item in Model)
+{
+    <div class="row">
+        <div class="col-md-5">
+            <a href="@Url.Action("Details", "Actors", new { id = item.Id })">
+                @*<img src="@Url.Content(item.PhotoUrl)" class="img-responsive">*@
+                @Html.DisplayFor(m => item.PhotoUrl, new { @class = "img-responsive" })
+            </a>
+        </div>
+        <div class="col-md-5">
+            <h3>@item.FullName</h3>
+            <h4>Subheading</h4>
+            <p>@item.Biography</p>
+            <a href="@Url.Action("SingleItem","Portfolio")" class="btn btn-primary">View Project <i class="fa fa-angle-right"></i></a>
+        </div>
+        <div class="col-md-2">
+            @Html.ActionLink("Delete", "Delete", "Actors", new { id = item.Id, area = "Administration" }, new { data_modal = "", @class = "btn btn-danger" })
+            @Html.ActionLink("Edit", "Edit", "Actors", new { id = item.Id }, new { data_modal = "", @class = "btn btn-danger" })
+        </div>
+    </div>
+    <hr>
+}
+
+@Scripts.Render("~/bundles/modal")
