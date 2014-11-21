@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ImdbLite.Web.Areas.Administration.ViewModels.Actors.ActorViewModel>
+﻿@model IEnumerable<ActorViewModel>
 
 @foreach (var item in Model)
 {
@@ -16,7 +16,7 @@
             <a href="@Url.Action("SingleItem","Portfolio")" class="btn btn-primary">View Project <i class="fa fa-angle-right"></i></a>
         </div>
         <div class="col-md-2">
-            @Html.ActionLink("Delete", "Delete", "Actors", new { id = item.Id, area = "Administration" }, new { data_modal = "", @class = "btn btn-danger" })
+            @Html.ActionLink("Delete", "Delete", "Actors", new { id = item.Id, area = GlobalConstants.AdminArea }, new { data_modal = "", @class = "btn btn-danger" })
             @Html.ActionLink("Edit", "Edit", "Actors", new { id = item.Id }, new { data_modal = "", @class = "btn btn-danger" })
         </div>
     </div>

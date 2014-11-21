@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImdbLite.Web", "Web\ImdbLit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImdbLite.Web.Infrastructure", "Web\ImdbLite.Web.Infrastructure\ImdbLite.Web.Infrastructure.csproj", "{824821EF-B6BE-4A39-A59D-EE30A5C90670}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImdbLite.Common", "Common\ImdbLite.Common\ImdbLite.Common.csproj", "{A965E348-87B6-482D-8BF4-5B9197467BB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{824821EF-B6BE-4A39-A59D-EE30A5C90670}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{824821EF-B6BE-4A39-A59D-EE30A5C90670}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{824821EF-B6BE-4A39-A59D-EE30A5C90670}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A965E348-87B6-482D-8BF4-5B9197467BB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A965E348-87B6-482D-8BF4-5B9197467BB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A965E348-87B6-482D-8BF4-5B9197467BB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A965E348-87B6-482D-8BF4-5B9197467BB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -55,5 +61,6 @@ Global
 		{BB8A3F8C-09E0-412A-9F7F-482F02C248A2} = {34821AEF-95DA-4A0E-B137-BC29838AD85F}
 		{CAEA631A-FB87-4B6E-A564-53BC533C8431} = {C96F5198-2C85-4E53-9657-142A4D5E14D1}
 		{824821EF-B6BE-4A39-A59D-EE30A5C90670} = {C96F5198-2C85-4E53-9657-142A4D5E14D1}
+		{A965E348-87B6-482D-8BF4-5B9197467BB7} = {EB4E240F-2CCE-430A-89A0-45CE5220B371}
 	EndGlobalSection
 EndGlobal
