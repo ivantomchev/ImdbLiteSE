@@ -14,11 +14,11 @@ namespace ImdbLite.Data.Migrations
 
         protected override void Seed(ApplicationDbContext context)
         {
-            PopulateGenres(context);
+            //PopulateGenres(context);
 
-            context.SaveChanges();
+            //context.SaveChanges();
 
-            base.Seed(context);
+            //base.Seed(context);
         }
 
         private static void PopulateGenres(ApplicationDbContext context)

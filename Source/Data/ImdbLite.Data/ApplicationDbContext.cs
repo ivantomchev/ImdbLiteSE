@@ -14,50 +14,51 @@
     using ImdbLite.Data.Models.Writer;
     using Microsoft.AspNet.Identity.EntityFramework;
     
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public class ApplicationDbContext : IdentityDbContext<User>, IApplicationDbContext
     {
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<ApplicationDbContext, Configuration>());
         }
-
-        public IDbSet<Movie> Movies { get; set; }
-
-        public IDbSet<MoviesComment> MoviesComments { get; set; }
-
-        public IDbSet<MoviesPhoto> MoviesPhotos { get; set; }
-
-        public IDbSet<Actor> Actors { get; set; }
-
-        public IDbSet<ActorsComment> ActorsComments { get; set; }
-
-        public IDbSet<ActorsPhoto> ActorsPhotos { get; set; }
-
-        public IDbSet<Director> Directors { get; set; }
-
-        public IDbSet<DirectorsComment> DirectorsComments { get; set; }
-
-        public IDbSet<DirectorsPhoto> DirectorsPhotos { get; set; }
-
-        public IDbSet<Producer> Producers { get; set; }
-
-        public IDbSet<ProducersComment> ProducersComments { get; set; }
-
-        public IDbSet<ProducersPhoto> ProducersPhotos { get; set; }
-
-        public IDbSet<Writer> Writers { get; set; }
-
-        public IDbSet<WritersComment> WritersComments { get; set; }
-
-        public IDbSet<WritersPhoto> WritersPhotos { get; set; }
-
-        public IDbSet<Genre> Genres { get; set; }
-
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
+
+        public virtual IDbSet<Movie> Movies { get; set; }
+             
+        public virtual IDbSet<MoviesComment> MoviesComments { get; set; }
+             
+        public virtual IDbSet<MoviesPhoto> MoviesPhotos { get; set; }
+              
+        public virtual IDbSet<Actor> Actors { get; set; }
+             
+        public virtual IDbSet<ActorsComment> ActorsComments { get; set; }
+           
+        public virtual IDbSet<ActorsPhoto> ActorsPhotos { get; set; }
+               
+        public virtual IDbSet<Director> Directors { get; set; }
+            
+        public virtual IDbSet<DirectorsComment> DirectorsComments { get; set; }
+            
+        public virtual IDbSet<DirectorsPhoto> DirectorsPhotos { get; set; }
+          
+        public virtual IDbSet<Producer> Producers { get; set; }
+            
+        public virtual IDbSet<ProducersComment> ProducersComments { get; set; }
+       
+        public virtual IDbSet<ProducersPhoto> ProducersPhotos { get; set; }
+           
+        public virtual IDbSet<Writer> Writers { get; set; }
+             
+        public virtual IDbSet<WritersComment> WritersComments { get; set; }
+          
+        public virtual IDbSet<WritersPhoto> WritersPhotos { get; set; }
+
+        public virtual IDbSet<Genre> Genres { get; set; }
+
+        
 
         public override int SaveChanges()
         {
@@ -88,6 +89,17 @@
                     entity.ModifiedOn = DateTime.Now;
                 }
             }
+        }
+
+
+        public new IDbSet<T> Set<T>() where T : class
+        {
+            return base.Set<T>();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            base.Dispose(disposing);
         }
     }
 }

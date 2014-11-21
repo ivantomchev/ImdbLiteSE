@@ -56,7 +56,7 @@
     <Compile Include="Actor\ActorsComment.cs" />
     <Compile Include="Actor\ActorsPhoto.cs" />
     <Compile Include="Genre\Genre.cs" />
-    <Compile Include="User\ApplicationUser.cs" />
+    <Compile Include="User\User.cs" />
     <Compile Include="Base\CastMember.cs" />
     <Compile Include="Base\Comment.cs" />
     <Compile Include="Base\Photo.cs" />

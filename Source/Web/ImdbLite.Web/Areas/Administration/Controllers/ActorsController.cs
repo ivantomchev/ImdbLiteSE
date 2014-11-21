@@ -5,20 +5,20 @@
     using System.Web.Mvc;
     using AutoMapper.QueryableExtensions;
     using ImdbLite.Web.Areas.Administration.ViewModels.Actors;
+    using ImdbLite.Web.Controllers;
+    using ImdbLite.Data.UnitOfWork;
 
-    public class ActorsController : Controller
+    public class ActorsController : BaseController
     {
-        private readonly IDeletableEntityRepository<Actor> actors;
-
-        public ActorsController(IDeletableEntityRepository<Actor> actors)
+        public ActorsController(IImdbLiteData data)
+            :base(data)
         {
-            this.actors = actors;
         }
 
         // GET: Administration/Actors
         public ActionResult Index()
         {
-            var data = this.actors.All().Project().To<ActorViewModel>();
+            var data = this.Data.Actors.All().Project().To<ActorViewModel>();
 
             return View(data);
         }

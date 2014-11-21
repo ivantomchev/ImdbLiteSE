@@ -53,8 +53,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationDbContext.cs" />
+    <Compile Include="IApplicationDbContext.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitOfWork\IImdbLiteData.cs" />
+    <Compile Include="UnitOfWork\ImdbLiteData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

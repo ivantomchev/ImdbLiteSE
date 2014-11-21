@@ -8,9 +8,9 @@
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
 
-    public class ApplicationUser : IdentityUser, IAuditInfo, IDeletableEntity
+    public class User : IdentityUser, IAuditInfo, IDeletableEntity
     {
-        public ApplicationUser()
+        public User()
         {
             this.CreatedOn = DateTime.Now;
         }
@@ -26,7 +26,7 @@
 
         public DateTime? DeletedOn { get; set; }
 
-        public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
+        public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<User> manager)
         {
             //// Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
             var userIdentity = await manager.CreateIdentityAsync(this, DefaultAuthenticationTypes.ApplicationCookie);
