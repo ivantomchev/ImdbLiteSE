@@ -49,7 +49,6 @@ function bindForm(dialog) {
 
                     $('#myModalContent').html(data);
                     bindForm();
-
                 }
             }
         });

@@ -1,0 +1,70 @@
+﻿@model CreateActorViewModel
+
+
+@using (Html.BeginForm("Create", "Actors", new { area = GlobalConstants.AdminArea }, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title text-center" id="myModal-label">New Actor</h4>
+    </div>
+    <div class="modal-body">
+
+        <div class="form container-fluid">
+
+            @Html.ValidationSummary(true, string.Empty, new { @class = "text-danger" })
+
+            <div class="col-md-5">
+                <div class="form-group">
+                    @Html.Image(Url.Content("~/Files/Images/Common/No_Photo.jpg"), new { @class = "img-responsive", id = "image-preview" })
+
+                    @Html.EditorFor(model => model.MainPhotoFile)
+
+                </div>
+            </div>
+
+            <div class="col-md-7">
+
+                @Html.EditorFor(model => model.FirstName)
+
+                @Html.EditorFor(model => model.LastName)
+
+                @Html.EditorFor(model => model.Nickname)
+
+                @Html.EditorFor(model => model.BirthDate)
+
+                @Html.EditorFor(model => model.BirthCity)
+
+                @Html.EditorFor(model => model.BirthCountry)
+
+                @Html.EditorFor(model => model.Biography)
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        @Html.Submit(new { value = "Close", @class = "btn btn-default", data_dismiss = "modal" })
+        @Html.Submit(new { value = "Save", @class = "btn btn-primary" })
+    </div>
+
+}
+
+<script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#image-preview').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#upload-file").change(function () {
+        readURL(this);
+    });
+</script>

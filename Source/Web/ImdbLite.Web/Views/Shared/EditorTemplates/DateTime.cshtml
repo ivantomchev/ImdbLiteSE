@@ -1,0 +1,7 @@
+﻿@model DateTime
+
+<div class="form-group">
+    @Html.LabelFor(model => model, new { @class = "control-label" })
+    @Html.TextBoxFor(model => model, new { @class = "form-control datefield", type = "date" })
+    @Html.ValidationMessageFor(model => model, "", new { @class = "text-danger" })
+</div>

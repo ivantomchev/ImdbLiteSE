@@ -32,10 +32,8 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="col-lg-12" id="actors-list">
-        @Html.Partial("_ActorsListPartial",Model)
-    </div>
+<div class="row" id="actors-list">
+    @Html.Partial("_ActorsListPartial", Model)
 </div>
 
-@Scripts.Render()
+@Scripts.Render("~/bundles/modal")

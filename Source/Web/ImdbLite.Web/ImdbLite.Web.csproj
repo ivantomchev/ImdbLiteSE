@@ -179,9 +179,14 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Administration\AdministrationAreaRegistration.cs" />
     <Compile Include="Areas\Administration\Controllers\ActorsController.cs" />
+    <Compile Include="Areas\Administration\Controllers\Base\AdminController.cs" />
+    <Compile Include="Areas\Administration\Controllers\GenresController.cs" />
     <Compile Include="Areas\Administration\Controllers\HomeController.cs" />
     <Compile Include="Areas\Administration\ViewModels\Actors\ActorViewModel.cs" />
+    <Compile Include="Areas\Administration\ViewModels\Actors\CreateActorViewModel.cs" />
     <Compile Include="Areas\Administration\ViewModels\Base\CastMemberViewModel.cs" />
+    <Compile Include="Areas\Administration\ViewModels\Genres\GenreBaseViewModel.cs" />
+    <Compile Include="Areas\Administration\ViewModels\Genres\GenreDetailsViewModel.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -215,6 +220,7 @@
     <Content Include="Content\bootstrap.darkly.min.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
+    <Content Include="Files\Images\Common\No_Photo.jpg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -228,6 +234,12 @@
     <Content Include="Areas\Administration\Views\Home\Index.cshtml" />
     <Content Include="Areas\Administration\Views\Actors\Index.cshtml" />
     <Content Include="Areas\Administration\Views\Actors\_ActorsListPartial.cshtml" />
+    <Content Include="Areas\Administration\Views\Actors\_CreateActorDialogPartial.cshtml" />
+    <Content Include="Areas\Administration\Views\Genres\Index.cshtml" />
+    <Content Include="Areas\Administration\Views\Genres\_ReadGenresPartial.cshtml" />
+    <Content Include="Areas\Administration\Views\Genres\_CreateGenrePartial.cshtml" />
+    <Content Include="Areas\Administration\Views\Genres\_UpdateGenrePartial.cshtml" />
+    <Content Include="Areas\Administration\Views\Genres\_DeleteGenrePartial.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -237,6 +249,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\Modal\modalform.js" />
+    <Content Include="Scripts\Modal\modalformOriginal.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -248,7 +261,9 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -279,9 +294,16 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\UploadFile.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\SingleLineText.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\MultiLineText.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\DateTime.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Boolean.cshtml" />
+    <Content Include="Areas\Administration\Views\Shared\_DeleteItemPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Administration\Views\Admin\" />
     <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
