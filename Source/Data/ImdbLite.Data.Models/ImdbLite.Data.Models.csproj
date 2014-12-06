@@ -52,27 +52,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Actor\Actor.cs" />
-    <Compile Include="Actor\ActorsComment.cs" />
-    <Compile Include="Actor\ActorsPhoto.cs" />
-    <Compile Include="Genre\Genre.cs" />
-    <Compile Include="User\User.cs" />
+    <Compile Include="Actor.cs" />
     <Compile Include="Base\CastMember.cs" />
-    <Compile Include="Base\Comment.cs" />
-    <Compile Include="Base\Photo.cs" />
-    <Compile Include="Director\Director.cs" />
-    <Compile Include="Director\DirectorsComment.cs" />
-    <Compile Include="Director\DirectorsPhoto.cs" />
-    <Compile Include="Movie\Movie.cs" />
-    <Compile Include="Movie\MoviesComment.cs" />
-    <Compile Include="Movie\MoviesPhoto.cs" />
-    <Compile Include="Producer\Producer.cs" />
-    <Compile Include="Producer\ProducersComment.cs" />
-    <Compile Include="Producer\ProducersPhoto.cs" />
+    <Compile Include="Character.cs" />
+    <Compile Include="Comment.cs" />
+    <Compile Include="Director.cs" />
+    <Compile Include="Genre.cs" />
+    <Compile Include="Movie.cs" />
+    <Compile Include="Photo.cs" />
+    <Compile Include="Producer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Writer\Writer.cs" />
-    <Compile Include="Writer\WritersComment.cs" />
-    <Compile Include="Writer\WritersPhoto.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="Writer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

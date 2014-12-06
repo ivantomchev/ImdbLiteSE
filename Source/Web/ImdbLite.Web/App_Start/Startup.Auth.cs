@@ -1,13 +1,15 @@
 ﻿namespace ImdbLite.Web
 {
     using System;
+
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.Owin;
     using Microsoft.Owin;
     using Microsoft.Owin.Security.Cookies;
     using Owin;
+
     using ImdbLite.Data;
-    using ImdbLite.Data.Models.User;
+    using ImdbLite.Data.Models;
 
     public partial class Startup
     {

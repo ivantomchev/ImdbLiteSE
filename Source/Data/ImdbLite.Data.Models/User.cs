@@ -1,12 +1,14 @@
-﻿namespace ImdbLite.Data.Models.User
+﻿namespace ImdbLite.Data.Models
 {
     using System;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Security.Claims;
     using System.Threading.Tasks;
-    using ImdbLite.Data.Common.Models;   
+
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
+
+    using ImdbLite.Data.Common.Models;
 
     public class User : IdentityUser, IAuditInfo, IDeletableEntity
     {

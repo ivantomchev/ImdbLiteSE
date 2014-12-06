@@ -1,19 +1,19 @@
 ﻿namespace ImdbLite.Data.Models.Base
 {
     using System;
-    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using ImdbLite.Data.Common.Models;    
-    using ImdbLite.Data.Models.Movie;
+    using System.Collections.Generic;
+
+    using ImdbLite.Data.Common.Models;
 
     public abstract class CastMember : IAuditInfo, IDeletableEntity
     {
-        private ICollection<Movie> movies;
+        private ICollection<Photo> photos;
 
         public CastMember()
         {
-            this.movies = new HashSet<Movie>();
+            this.photos = new HashSet<Photo>();
         }
 
         [Key]
@@ -31,22 +31,11 @@
 
         public string BirthCountry { get; set; }
 
-        public string MainPhotoUrl { get; set; }
-
         public string Biography { get; set; }
 
-        public virtual ICollection<Movie> Movies
-        {
-            get
-            {
-                return this.movies;
-            }
+        public int MainPhotoId { get; set; }
 
-            set
-            {
-                this.movies = value;
-            }
-        }
+        public virtual Photo MainPhoto { get; set; }
 
         public DateTime CreatedOn { get; set; }
 
@@ -58,5 +47,18 @@
         public bool IsDeleted { get; set; }
 
         public DateTime? DeletedOn { get; set; }
+
+        public virtual ICollection<Photo> Photos
+        {
+            get
+            {
+                return this.photos;
+            }
+
+            set
+            {
+                this.photos = value;
+            }
+        }
     }
 }

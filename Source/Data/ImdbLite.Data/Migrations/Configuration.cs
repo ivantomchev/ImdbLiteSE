@@ -2,7 +2,8 @@ namespace ImdbLite.Data.Migrations
 {
     using System.Collections.Generic;
     using System.Data.Entity.Migrations;
-    using ImdbLite.Data.Models.Genre;
+
+    using ImdbLite.Data.Models;
 
     internal sealed class Configuration : DbMigrationsConfiguration<ApplicationDbContext>
     {

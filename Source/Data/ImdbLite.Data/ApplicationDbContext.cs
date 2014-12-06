@@ -3,17 +3,13 @@
     using System;
     using System.Data.Entity;
     using System.Linq;
+
+    using Microsoft.AspNet.Identity.EntityFramework;
+
     using ImdbLite.Data.Common.Models;
     using ImdbLite.Data.Migrations;
-    using ImdbLite.Data.Models.Actor;
-    using ImdbLite.Data.Models.Director;
-    using ImdbLite.Data.Models.Genre;
-    using ImdbLite.Data.Models.Movie;
-    using ImdbLite.Data.Models.Producer;
-    using ImdbLite.Data.Models.User;
-    using ImdbLite.Data.Models.Writer;
-    using Microsoft.AspNet.Identity.EntityFramework;
-    
+    using ImdbLite.Data.Models;
+
     public class ApplicationDbContext : IdentityDbContext<User>, IApplicationDbContext
     {
         public ApplicationDbContext()
@@ -27,38 +23,22 @@
         }
 
         public virtual IDbSet<Movie> Movies { get; set; }
-             
-        public virtual IDbSet<MoviesComment> MoviesComments { get; set; }
-             
-        public virtual IDbSet<MoviesPhoto> MoviesPhotos { get; set; }
-              
+
+        public virtual IDbSet<Comment> Comments { get; set; }
+
+        public virtual IDbSet<Photo> Photos { get; set; }
+
         public virtual IDbSet<Actor> Actors { get; set; }
-             
-        public virtual IDbSet<ActorsComment> ActorsComments { get; set; }
-           
-        public virtual IDbSet<ActorsPhoto> ActorsPhotos { get; set; }
-               
+
         public virtual IDbSet<Director> Directors { get; set; }
-            
-        public virtual IDbSet<DirectorsComment> DirectorsComments { get; set; }
-            
-        public virtual IDbSet<DirectorsPhoto> DirectorsPhotos { get; set; }
-          
+
         public virtual IDbSet<Producer> Producers { get; set; }
-            
-        public virtual IDbSet<ProducersComment> ProducersComments { get; set; }
-       
-        public virtual IDbSet<ProducersPhoto> ProducersPhotos { get; set; }
-           
+
         public virtual IDbSet<Writer> Writers { get; set; }
-             
-        public virtual IDbSet<WritersComment> WritersComments { get; set; }
-          
-        public virtual IDbSet<WritersPhoto> WritersPhotos { get; set; }
 
         public virtual IDbSet<Genre> Genres { get; set; }
 
-        
+
 
         public override int SaveChanges()
         {
@@ -90,7 +70,6 @@
                 }
             }
         }
-
 
         public new IDbSet<T> Set<T>() where T : class
         {

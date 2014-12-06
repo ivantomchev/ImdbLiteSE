@@ -1,11 +1,12 @@
-﻿namespace ImdbLite.Data.Models.Base
+﻿namespace ImdbLite.Data.Models
 {
     using System;
     using System.ComponentModel.DataAnnotations.Schema;
-    using ImdbLite.Data.Common.Models;
-    using ImdbLite.Data.Models.User;
 
-    public abstract class Comment : IAuditInfo, IDeletableEntity
+    using ImdbLite.Data.Common.Models;
+    using ImdbLite.Data.Models;
+
+    public class Comment : IAuditInfo, IDeletableEntity
     {
         public int Id { get; set; }
 
@@ -25,5 +26,9 @@
         public bool IsDeleted { get; set; }
 
         public DateTime? DeletedOn { get; set; }
+
+        public int MovieId { get; set; }
+
+        public virtual Movie Movie { get; set; }
     }
 }

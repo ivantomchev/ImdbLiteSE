@@ -10,10 +10,9 @@ namespace ImdbLite.Web.App_Start
 
     using Ninject;
     using Ninject.Web.Common;
-    using System.Data.Entity;
+
     using ImdbLite.Data;
     using ImdbLite.Data.Common.Repository;
-    using ImdbLite.Data.Models.Actor;
     using ImdbLite.Data.UnitOfWork;
 
     public static class NinjectWebCommon

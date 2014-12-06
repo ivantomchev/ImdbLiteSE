@@ -1,13 +1,10 @@
-﻿namespace ImdbLite.Data.Models.Movie
+﻿namespace ImdbLite.Data.Models
 {
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using ImdbLite.Data.Models.Actor;
-    using ImdbLite.Data.Models.Director;
-    using ImdbLite.Data.Models.Genre;
-    using ImdbLite.Data.Models.Producer;
-    using ImdbLite.Data.Models.Writer;
+
+    using ImdbLite.Data.Models;
 
     public class Movie
     {
@@ -17,23 +14,20 @@
 
         private ICollection<Writer> writtenBy;
 
-        private ICollection<Actor> actors;
+        private ICollection<Photo> photos;
 
-        ////private ICollection<Vote> votes;
+        private ICollection<Comment> comments;
 
-        private ICollection<MoviesPhoto> photos;
-
-        private ICollection<MoviesComment> comments;
+        private ICollection<Character> characters;
 
         public Movie()
         {
             this.genres = new HashSet<Genre>();
             this.producedBy = new HashSet<Producer>();
             this.writtenBy = new HashSet<Writer>();
-            this.actors = new HashSet<Actor>();
-            ////this.votes = new HashSet<Vote>();
-            this.photos = new HashSet<MoviesPhoto>();
-            this.comments = new HashSet<MoviesComment>();
+            this.photos = new HashSet<Photo>();
+            this.comments = new HashSet<Comment>();
+            this.characters = new HashSet<Character>();
         }
 
         [Key]
@@ -50,9 +44,7 @@
 
         public string StoryLine { get; set; }
 
-        public string PosterUrl { get; set; }
-
-        public ICollection<MoviesPhoto> Photos
+        public virtual ICollection<Photo> Photos
         {
             get
             {
@@ -108,32 +100,7 @@
             }
         }
 
-        public virtual ICollection<Actor> Actors
-        {
-            get
-            {
-                return this.actors;
-            }
-
-            set
-            {
-                this.actors = value;
-            }
-        }
-
-        ////public virtual ICollection<Vote> Votes
-        ////{
-        ////    get
-        ////    {
-        ////        return this.votes;
-        ////    }
-        ////    set
-        ////    {
-        ////        this.votes = value;
-        ////    }
-        ////}
-
-        public virtual ICollection<MoviesComment> Comments
+        public virtual ICollection<Comment> Comments
         {
             get
             {
@@ -143,6 +110,19 @@
             set
             {
                 this.comments = value;
+            }
+        }
+
+        public virtual ICollection<Character> Characters
+        {
+            get
+            {
+                return this.characters;
+            }
+
+            set
+            {
+                this.characters = value;
             }
         }
     }

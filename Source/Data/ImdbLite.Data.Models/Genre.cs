@@ -1,11 +1,13 @@
-﻿namespace ImdbLite.Data.Models.Genre
+﻿namespace ImdbLite.Data.Models
 {
+    using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using ImdbLite.Data.Models.Movie;
-    using ImdbLite.Data.Common.Models;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System;
+
+    using ImdbLite.Data.Common.Models;
+    using ImdbLite.Data.Models;
+
 
     public class Genre : IAuditInfo, IDeletableEntity
     {

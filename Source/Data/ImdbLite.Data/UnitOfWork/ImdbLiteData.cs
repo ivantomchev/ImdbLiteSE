@@ -3,14 +3,10 @@
     using System;
     using System.Data.Entity;
     using System.Collections.Generic;
+
     using ImdbLite.Data.Common.Models;
     using ImdbLite.Data.Common.Repository;
-    using ImdbLite.Data.Models.User;
-    using ImdbLite.Data.Models.Actor;
-    using ImdbLite.Data.Models.Genre;
-    using ImdbLite.Data.Models.Director;
-    using ImdbLite.Data.Models.Producer;
-    using ImdbLite.Data.Models.Writer;
+    using ImdbLite.Data.Models;
 
     public class ImdbLiteData : IImdbLiteData
     {

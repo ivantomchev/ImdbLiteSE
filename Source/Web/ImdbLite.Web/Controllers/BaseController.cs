@@ -1,14 +1,11 @@
 ﻿namespace ImdbLite.Web.Controllers
 {
     using System;
-    using System.Collections;
-    using System.Collections.Generic;
     using System.Linq;
-    using System.Web;
     using System.Web.Mvc;
     using System.Web.Routing;
 
-    using ImdbLite.Data.Models.User;
+    using ImdbLite.Data.Models;
     using ImdbLite.Data.UnitOfWork;
 
     public abstract class BaseController : Controller

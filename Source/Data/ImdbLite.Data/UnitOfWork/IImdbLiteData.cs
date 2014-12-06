@@ -1,17 +1,13 @@
 ﻿namespace ImdbLite.Data.UnitOfWork
 {
-    using ImdbLite.Data.Common.Repository;
-    using ImdbLite.Data.Models.Actor;
-    using ImdbLite.Data.Models.Director;
-    using ImdbLite.Data.Models.Genre;
-    using ImdbLite.Data.Models.Producer;
-    using ImdbLite.Data.Models.User;
-    using ImdbLite.Data.Models.Writer;
     using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+
+    using ImdbLite.Data.Common.Repository;
+    using ImdbLite.Data.Models;
 
     public interface IImdbLiteData
     {

@@ -227,10 +227,6 @@
     <Content Include="Areas\Administration\Views\Home\Index.cshtml" />
     <Content Include="Areas\Administration\Views\Actors\Index.cshtml" />
     <Content Include="Areas\Administration\Views\Genres\Index.cshtml" />
-    <Content Include="Areas\Administration\Views\Genres\_ReadGenresPartial.cshtml" />
-    <Content Include="Areas\Administration\Views\Genres\_CreateGenrePartial.cshtml" />
-    <Content Include="Areas\Administration\Views\Genres\_UpdateGenrePartial.cshtml" />
-    <Content Include="Areas\Administration\Views\Genres\_DeleteGenrePartial.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -290,7 +286,6 @@
     <Content Include="Views\Shared\EditorTemplates\MultiLineText.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\DateTime.cshtml" />
     <Content Include="Views\Shared\DisplayTemplates\Boolean.cshtml" />
-    <Content Include="Areas\Administration\Views\Shared\_DeleteItemPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
