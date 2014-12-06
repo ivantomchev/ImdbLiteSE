@@ -6,13 +6,7 @@
 
 <h2>@ViewBag.Title</h2>
 
-<div id='myModal' class='modal fade in'>
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div id='myModalContent'></div>
-        </div>
-    </div>
-</div>
+@Html.Partial("_ModalDialogPartial")
 
 <div class="row">
     @Html.ActionLink("New Genre", "Create", "Genres", new { area = GlobalConstants.AdminArea }, new { data_modal = "", @class = "btn btn-default" })
