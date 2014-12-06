@@ -10,6 +10,8 @@
     using ImdbLite.Data.UnitOfWork;
     using ImdbLite.Web.Controllers;
     using System.Web.Mvc;
+    using System.Web;
+    using ImdbLite.Common;
 
     public abstract class AdminController : BaseController
     {
@@ -66,35 +68,21 @@
             this.Data.SaveChanges();
         }
 
-        protected JsonResult GridOperation(string listToUpdate, string url)
+        protected JsonResult GridOperation()
         {
-            return Json(new { success = true, listToUpdate = listToUpdate, url = url });
+            return Json(new { success = true });
         }
 
-        protected string GenerateFilePath(string mainDirectory, string subDirectory, string fileExtention)
+        protected string GenerateFilePath(HttpPostedFileBase file)
         {
-            string filename = string.Format("{0}{1}", Guid.NewGuid(), fileExtention);
+            string filename = string.Format("{0}{1}", Guid.NewGuid(), Path.GetExtension(file.FileName));
 
-            //Creating Directory if needed
-            var dir = string.Format("{0}{1}", mainDirectory, subDirectory);
-            Directory.CreateDirectory(Server.MapPath(dir));
-
+            string mainDirectory = GlobalConstants.ImageDirectory;
             //Creating relative path
-            string filePath = string.Format("{0}/{1}", dir, filename);
+            string filePath = string.Format("{0}{1}", mainDirectory, filename);
+
 
             return filePath;
-        }
-
-        protected string GenerateSubDirectoryName(string[] subDirectoryComponents)
-        {
-            var result = new StringBuilder();
-
-            for (int i = 0; i < subDirectoryComponents.Length; i++)
-            {
-                result.Append(subDirectoryComponents[i]);
-            }
-
-            return result.ToString();
         }
     }
 }

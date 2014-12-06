@@ -8,6 +8,6 @@
 
         public const string DateTimeFormatString = "{0:yyyy-MM-dd}";
 
-        public const string ActorsDirectory = "~/Files/Images/Actors/";
+        public const string ImageDirectory = "~/Uploads/Images/";
     }
 }

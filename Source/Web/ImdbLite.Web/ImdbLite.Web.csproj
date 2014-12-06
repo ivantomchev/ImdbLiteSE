@@ -178,15 +178,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Administration\AdministrationAreaRegistration.cs" />
-    <Compile Include="Areas\Administration\Controllers\ActorsController.cs" />
     <Compile Include="Areas\Administration\Controllers\Base\AdminController.cs" />
-    <Compile Include="Areas\Administration\Controllers\GenresController.cs" />
     <Compile Include="Areas\Administration\Controllers\HomeController.cs" />
-    <Compile Include="Areas\Administration\ViewModels\Actors\ActorViewModel.cs" />
-    <Compile Include="Areas\Administration\ViewModels\Actors\CreateActorViewModel.cs" />
-    <Compile Include="Areas\Administration\ViewModels\Base\CastMemberViewModel.cs" />
-    <Compile Include="Areas\Administration\ViewModels\Genres\GenreBaseViewModel.cs" />
-    <Compile Include="Areas\Administration\ViewModels\Genres\GenreDetailsViewModel.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -233,8 +226,6 @@
     <Content Include="Areas\Administration\Views\Shared\_AdministrationLayout.cshtml" />
     <Content Include="Areas\Administration\Views\Home\Index.cshtml" />
     <Content Include="Areas\Administration\Views\Actors\Index.cshtml" />
-    <Content Include="Areas\Administration\Views\Actors\_ActorsListPartial.cshtml" />
-    <Content Include="Areas\Administration\Views\Actors\_CreateActorDialogPartial.cshtml" />
     <Content Include="Areas\Administration\Views\Genres\Index.cshtml" />
     <Content Include="Areas\Administration\Views\Genres\_ReadGenresPartial.cshtml" />
     <Content Include="Areas\Administration\Views\Genres\_CreateGenrePartial.cshtml" />
@@ -303,6 +294,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Administration\ViewModels\Actors\" />
+    <Folder Include="Areas\Administration\ViewModels\Base\" />
+    <Folder Include="Areas\Administration\ViewModels\Genres\" />
     <Folder Include="Areas\Administration\Views\Admin\" />
     <Folder Include="Views\Base\" />
   </ItemGroup>
