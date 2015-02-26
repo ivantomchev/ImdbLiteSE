@@ -1,17 +1,16 @@
 ﻿namespace ImdbLite.Web.Areas.Administration.Controllers.Base
 {
-    using System;
     using System.Data.Entity;
     using System.IO;
-    using System.Text;
+    using System.Web.Mvc;
+    using System.Web;
+    using System.Collections;
 
     using AutoMapper;
 
     using ImdbLite.Data.UnitOfWork;
     using ImdbLite.Web.Controllers;
-    using System.Web.Mvc;
-    using System.Web;
-    using ImdbLite.Common;
+
 
     public abstract class AdminController : BaseController
     {
@@ -23,6 +22,8 @@
         }
 
         protected abstract T GetById<T>(object id) where T : class;
+
+        protected abstract IEnumerable GetData<TViewModel>() where TViewModel : class;
 
         protected virtual T Create<T>(object model) where T : class
         {
@@ -36,7 +37,7 @@
             return null;
         }
 
-        protected virtual void Update<TModel, TViewModel>(TViewModel model, object id)
+        protected virtual TModel Update<TModel, TViewModel>(TViewModel model, object id)
             where TModel : class
             where TViewModel : class
         {
@@ -45,7 +46,10 @@
                 var dbModel = this.GetById<TModel>(id);
                 Mapper.Map<TViewModel, TModel>(model, dbModel);
                 this.ChangeEntityStateAndSave(dbModel, EntityState.Modified);
+
+                return dbModel;
             }
+            return null;
         }
 
         protected virtual void Delete<TModel>(object model)
@@ -61,6 +65,27 @@
             this.ChangeEntityStateAndSave(dbModel, EntityState.Deleted);
         }
 
+        protected virtual TViewModel GetViewModel<TModel, TViewModel>(object id)
+            where TModel : class
+            where TViewModel : class
+        {
+            if (id == null)
+            {
+                return null;
+            }
+
+            var dbModel = this.GetById<TModel>(id);
+
+            if (dbModel == null)
+            {
+                return null;
+            }
+
+            var model = Mapper.Map<TViewModel>(dbModel);
+
+            return model;
+        }
+
         protected void ChangeEntityStateAndSave(object dbModel, EntityState state)
         {
             var entry = this.Data.Context.Entry(dbModel);
@@ -71,18 +96,6 @@
         protected JsonResult GridOperation()
         {
             return Json(new { success = true });
-        }
-
-        protected string GenerateFilePath(HttpPostedFileBase file)
-        {
-            string filename = string.Format("{0}{1}", Guid.NewGuid(), Path.GetExtension(file.FileName));
-
-            string mainDirectory = GlobalConstants.ImageDirectory;
-            //Creating relative path
-            string filePath = string.Format("{0}{1}", mainDirectory, filename);
-
-
-            return filePath;
         }
     }
 }
