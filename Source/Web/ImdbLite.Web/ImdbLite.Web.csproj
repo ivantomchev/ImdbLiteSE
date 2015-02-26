@@ -179,6 +179,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Administration\AdministrationAreaRegistration.cs" />
     <Compile Include="Areas\Administration\Controllers\Base\AdminController.cs" />
+    <Compile Include="Areas\Administration\Controllers\CelebritiesController.cs" />
     <Compile Include="Areas\Administration\Controllers\HomeController.cs" />
     <Compile Include="Areas\Administration\ViewModels\CastMembers\CastMemberInputModel.cs" />
     <Compile Include="Areas\Administration\ViewModels\Celebrities\CelebrityDeleteViewModel.cs" />
@@ -344,7 +345,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Administration\ViewModels\Base\" />
-    <Folder Include="Areas\Administration\Views\Admin\" />
+    <Folder Include="Areas\Administration\Views\Celebrities\" />
     <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
