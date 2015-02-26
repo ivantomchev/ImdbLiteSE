@@ -247,6 +247,11 @@
     <Content Include="Areas\Administration\Views\Shared\_AdministrationLayout.cshtml" />
     <Content Include="Areas\Administration\Views\Home\Index.cshtml" />
     <Content Include="Areas\Administration\Views\Shared\_ModalDialogPartial.cshtml" />
+    <Content Include="Areas\Administration\Views\Celebrities\Index.cshtml" />
+    <Content Include="Areas\Administration\Views\Celebrities\_ReadCelebritiesPartial.cshtml" />
+    <Content Include="Areas\Administration\Views\Celebrities\Create.cshtml" />
+    <Content Include="Areas\Administration\Views\Celebrities\Update.cshtml" />
+    <Content Include="Areas\Administration\Views\Celebrities\_DeleteCelebrityPartial.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\Chosen\chosen-sprite%402x.png" />
     <Content Include="Scripts\Chosen\chosen-sprite.png" />
@@ -347,7 +352,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Administration\ViewModels\Base\" />
-    <Folder Include="Areas\Administration\Views\Celebrities\" />
     <Folder Include="Areas\Administration\Views\Genres\" />
     <Folder Include="Areas\Administration\Views\Movies\" />
     <Folder Include="Views\Base\" />

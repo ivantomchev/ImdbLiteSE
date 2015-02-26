@@ -1,0 +1,49 @@
+﻿@model IEnumerable<ImdbLite.Web.Areas.Administration.ViewModels.Celebrities.CelebrityIndexViewModel>
+
+@{
+    ViewBag.Title = "Celebrities";
+}
+
+@Html.Partial("_ModalDialogPartial")
+
+<div class="row">
+    <h2>@ViewBag.Title</h2>
+</div>
+
+<div class="row">
+    @Html.ActionLink("New Celebrity", "Create", "Celebrities", new { area = GlobalConstants.AdminArea }, new { @class = "btn btn-default" })
+</div>
+<hr>
+
+<div class="row" id="celebrities">
+    @Html.Partial("_ReadCelebritiesPartial", Model)
+</div>
+
+<script type="text/javascript">
+
+    $('.trailer').click(function () {
+
+        var href = $(this).attr('href') + "&autoplay=1";
+
+        $.fancybox({
+            padding: 0,
+            href: href.replace(new RegExp("watch\\?v=", "i"), 'v/'),
+            type: 'swf',
+            swf: {
+                wmode: 'transparent',
+                allowfullscreen: 'true'
+            },
+            title: this.title,
+            autoSize: true,
+            fitToView: true,
+            transitionIn: 'elastic',
+            transitionOut: 'elastic',
+            onStart: function () {
+                $.fancybox.resize();
+            }
+        });
+
+        return false;
+    });
+
+</script>
