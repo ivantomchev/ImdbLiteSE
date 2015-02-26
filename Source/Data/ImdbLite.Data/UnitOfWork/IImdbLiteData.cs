@@ -11,6 +11,24 @@
 
     public interface IImdbLiteData
     {
+        IApplicationDbContext Context { get; }
+
+        IDeletableEntityRepository<User> Users { get; }
+
+        IDeletableEntityRepository<Celebrity> Celebrities { get; }
+
+        IDeletableEntityRepository<Movie> Movies { get; }
+
+        IDeletableEntityRepository<Character> Characters { get; }
+
+        IDeletableEntityRepository<CastMember> CastMembers { get; }
+
+        IRepository<CelebrityMainPhoto> CelebrityMainPhotos { get; }
+
+        IRepository<MoviePoster> MoviePosters { get; }
+
+        IRepository<Genre> Genres { get; }
+
         int SaveChanges();
     }
 }
