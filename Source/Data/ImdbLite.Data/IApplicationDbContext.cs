@@ -8,6 +8,17 @@
 
     public interface IApplicationDbContext
     {
+        IDbSet<Celebrity> Celebrities { get; set; }
+
+        IDbSet<Movie> Movies { get; set; }
+
+        IDbSet<Genre> Genres { get; set; }
+
+        IDbSet<Character> Characters { get; set; }
+
+        IDbSet<CastMember> CastMembers { get; set; }
+
+        IDbSet<CelebrityMainPhoto> CelebrityMainPhotos { get; set; }
 
         int SaveChanges();
 
