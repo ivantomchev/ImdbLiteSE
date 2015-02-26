@@ -22,10 +22,33 @@
             return new ApplicationDbContext();
         }
 
+        public virtual IDbSet<Celebrity> Celebrities { get; set; }
+
+        public virtual IDbSet<Movie> Movies { get; set; }
+
+        public virtual IDbSet<Genre> Genres { get; set; }
+
+        public virtual IDbSet<Character> Characters { get; set; }
+
+        public virtual IDbSet<CastMember> CastMembers { get; set; }
+
+        public virtual IDbSet<CelebrityMainPhoto> CelebrityMainPhotos { get; set; }
+
         public override int SaveChanges()
         {
             this.ApplyAuditInfoRules();
             return base.SaveChanges();
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<CelebrityMainPhoto>().HasKey(x => x.CelebrityId);
+            modelBuilder.Entity<Celebrity>().HasRequired(x => x.Photo).WithRequiredPrincipal(x => x.Celebrity).WillCascadeOnDelete(true);
+
+            modelBuilder.Entity<MoviePoster>().HasKey(x => x.MovieId);
+            modelBuilder.Entity<Movie>().HasRequired(x => x.Poster).WithRequiredPrincipal(x => x.Movie).WillCascadeOnDelete(true);
+
+            base.OnModelCreating(modelBuilder);
         }
 
         private void ApplyAuditInfoRules()
