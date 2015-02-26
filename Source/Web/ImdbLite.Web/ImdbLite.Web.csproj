@@ -182,6 +182,7 @@
     <Compile Include="Areas\Administration\Controllers\CelebritiesController.cs" />
     <Compile Include="Areas\Administration\Controllers\GenresController.cs" />
     <Compile Include="Areas\Administration\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Administration\Controllers\MoviesController.cs" />
     <Compile Include="Areas\Administration\ViewModels\CastMembers\CastMemberInputModel.cs" />
     <Compile Include="Areas\Administration\ViewModels\Celebrities\CelebrityDeleteViewModel.cs" />
     <Compile Include="Areas\Administration\ViewModels\Celebrities\CelebrityIndexViewModel.cs" />
@@ -348,6 +349,7 @@
     <Folder Include="Areas\Administration\ViewModels\Base\" />
     <Folder Include="Areas\Administration\Views\Celebrities\" />
     <Folder Include="Areas\Administration\Views\Genres\" />
+    <Folder Include="Areas\Administration\Views\Movies\" />
     <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
