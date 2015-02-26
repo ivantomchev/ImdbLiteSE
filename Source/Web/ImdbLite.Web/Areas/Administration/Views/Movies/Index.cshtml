@@ -1,0 +1,21 @@
+﻿@model IEnumerable<ImdbLite.Web.Areas.Administration.ViewModels.Movies.MovieIndexViewModel>
+
+@{
+    ViewBag.Title = "Movies";
+}
+
+@Html.Partial("_ModalDialogPartial")
+
+<div class="row">
+    <h2>@ViewBag.Title</h2>
+</div>
+
+<div class="row">
+    @Html.ActionLink("New Movie", "Create", "Movies", new { area = GlobalConstants.AdminArea }, new { @class = "btn btn-default" })
+</div>
+
+<hr>
+
+<div class="row" id="movies">
+    @Html.Partial("_ReadMoviesPartial", Model)
+</div>

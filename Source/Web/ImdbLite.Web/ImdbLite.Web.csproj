@@ -257,6 +257,12 @@
     <Content Include="Areas\Administration\Views\Genres\Create.cshtml" />
     <Content Include="Areas\Administration\Views\Genres\_ReadGenresPartial.cshtml" />
     <Content Include="Areas\Administration\Views\Genres\_DeleteGenrePartial.cshtml" />
+    <Content Include="Areas\Administration\Views\Movies\Index.cshtml" />
+    <Content Include="Areas\Administration\Views\Movies\Update.cshtml" />
+    <Content Include="Areas\Administration\Views\Movies\Create.cshtml" />
+    <Content Include="Areas\Administration\Views\Movies\_ReadMoviesPartial.cshtml" />
+    <Content Include="Areas\Administration\Views\Movies\_DeleteMoviePartial.cshtml" />
+    <Content Include="Areas\Administration\Views\Movies\_CharactersPartial.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\Chosen\chosen-sprite%402x.png" />
     <Content Include="Scripts\Chosen\chosen-sprite.png" />
@@ -357,7 +363,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Administration\ViewModels\Base\" />
-    <Folder Include="Areas\Administration\Views\Movies\" />
     <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
