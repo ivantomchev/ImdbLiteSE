@@ -8,8 +8,9 @@
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/Chosen")
+    @Scripts.Render("~/bundles/fancybox")
     @Styles.Render("~/Content/custom")
-
 </head>
 <body>
     <div class="navbar navbar-default navbar-fixed-top">
@@ -27,15 +28,7 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Movies", "Index", "Movies")</li>
                     <li>@Html.ActionLink("Genres", "Index", "Genres")</li>
-                    <li id="celebrities" class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Celebrities <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("Actors", "Index", "Actors")</li>
-                            <li>@Html.ActionLink("Producers", "Index", "Producers")</li>
-                            <li>@Html.ActionLink("Directors", "Index", "Directors")</li>
-                            <li>@Html.ActionLink("Writers", "Index", "Writers")</li>
-                        </ul>
-                    </li>
+                    <li>@Html.ActionLink("Celebrities", "Index", "Celebrities")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
@@ -43,7 +36,6 @@
             </div>
         </div>
     </div>
-
     <div class="container panel-body">
         @RenderBody()
         <hr />
@@ -51,7 +43,6 @@
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
     </div>
-
 
     @RenderSection("scripts", required: false)
 </body>
