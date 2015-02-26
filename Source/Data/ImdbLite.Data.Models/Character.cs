@@ -4,12 +4,12 @@
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
-    public class CastMember : BaseEntity
+    public class Character : BaseEntity
     {
         [Key]
         public int Id { get; set; }
 
-        public ParticipationType Participation { get; set; }
+        public string CharacterName { get; set; }
 
         public int MovieId { get; set; }
 

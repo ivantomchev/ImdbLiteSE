@@ -27,35 +27,7 @@
             }
         }
 
-        public IDeletableEntityRepository<User> Users
-        {
-            get { return this.GetDeletableEntityRepository<User>(); }
-        }
-
-        public IDeletableEntityRepository<Genre> Genres
-        {
-            get { return this.GetDeletableEntityRepository<Genre>(); }
-        }
-
-        public IDeletableEntityRepository<Actor> Actors
-        {
-            get { return this.GetDeletableEntityRepository<Actor>(); }
-        }
-
-        public IDeletableEntityRepository<Director> Directors
-        {
-            get { return this.GetDeletableEntityRepository<Director>(); }
-        }
-
-        public IDeletableEntityRepository<Producer> Producers
-        {
-            get { return this.GetDeletableEntityRepository<Producer>(); }
-        }
-
-        public IDeletableEntityRepository<Writer> Writers
-        {
-            get { return this.GetDeletableEntityRepository<Writer>(); }
-        }
+       
         /// <summary>
         /// Saves all changes made in this context to the underlying database.
         /// </summary>

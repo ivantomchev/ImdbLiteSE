@@ -22,24 +22,6 @@
             return new ApplicationDbContext();
         }
 
-        public virtual IDbSet<Movie> Movies { get; set; }
-
-        public virtual IDbSet<Comment> Comments { get; set; }
-
-        public virtual IDbSet<Photo> Photos { get; set; }
-
-        public virtual IDbSet<Actor> Actors { get; set; }
-
-        public virtual IDbSet<Director> Directors { get; set; }
-
-        public virtual IDbSet<Producer> Producers { get; set; }
-
-        public virtual IDbSet<Writer> Writers { get; set; }
-
-        public virtual IDbSet<Genre> Genres { get; set; }
-
-
-
         public override int SaveChanges()
         {
             this.ApplyAuditInfoRules();

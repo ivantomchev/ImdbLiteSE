@@ -52,18 +52,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Actor.cs" />
-    <Compile Include="Base\CastMember.cs" />
+    <Compile Include="Base\BaseEntity.cs" />
+    <Compile Include="Base\Image.cs" />
+    <Compile Include="CastMember.cs" />
+    <Compile Include="Celebrity.cs" />
+    <Compile Include="CelebrityMainPhoto.cs" />
     <Compile Include="Character.cs" />
-    <Compile Include="Comment.cs" />
-    <Compile Include="Director.cs" />
     <Compile Include="Genre.cs" />
     <Compile Include="Movie.cs" />
-    <Compile Include="Photo.cs" />
-    <Compile Include="Producer.cs" />
+    <Compile Include="MoviePoster.cs" />
+    <Compile Include="ParticipationType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User.cs" />
-    <Compile Include="Writer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -75,6 +75,7 @@
       <Name>ImdbLite.Data.Common</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

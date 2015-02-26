@@ -11,20 +11,6 @@
 
     public interface IImdbLiteData
     {
-        IApplicationDbContext Context { get; }
-
-        IDeletableEntityRepository<User> Users { get; }
-
-        IDeletableEntityRepository<Genre> Genres { get; }
-
-        IDeletableEntityRepository<Actor> Actors { get; }
-
-        IDeletableEntityRepository<Director> Directors { get; }
-
-        IDeletableEntityRepository<Producer> Producers { get; }
-
-        IDeletableEntityRepository<Writer> Writers { get; }
-
         int SaveChanges();
     }
 }
