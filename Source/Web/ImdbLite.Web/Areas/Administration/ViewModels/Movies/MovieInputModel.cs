@@ -2,17 +2,16 @@
 {
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using System.Web.Mvc;
     using System.Linq;
+    using System.Web;
+    using System.Web.Mvc;
 
     using AutoMapper;
-    using ImdbLite.Web.Infrastructure.Mapping;
 
     using ImdbLite.Data.Models;
     using ImdbLite.Web.Areas.Administration.ViewModels.CastMembers;
     using ImdbLite.Web.Areas.Administration.ViewModels.Characters;
-    using System.Web;
-    using System.IO;
+    using ImdbLite.Web.Infrastructure.Mapping;
 
     public class MovieInputModel : IMapFrom<Movie>, IHaveCustomMappings, IMovieInputModel
     {

@@ -7,8 +7,8 @@
     using System.Web;
 
     using AutoMapper;
-    using ImdbLite.Web.Infrastructure.Mapping;
 
+    using ImdbLite.Web.Infrastructure.Mapping;
     using ImdbLite.Data.Models;
     using ImdbLite.Web.Areas.Administration.ViewModels.CastMembers;
     using ImdbLite.Web.Areas.Administration.ViewModels.Characters;
