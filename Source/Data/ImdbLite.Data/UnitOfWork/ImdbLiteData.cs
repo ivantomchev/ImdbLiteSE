@@ -27,7 +27,46 @@
             }
         }
 
-       
+        public IDeletableEntityRepository<User> Users
+        {
+            get { return this.GetDeletableEntityRepository<User>(); }
+        }
+
+        public IDeletableEntityRepository<Celebrity> Celebrities
+        {
+            get { return this.GetDeletableEntityRepository<Celebrity>(); }
+        }
+
+        public IDeletableEntityRepository<Movie> Movies
+        {
+            get { return this.GetDeletableEntityRepository<Movie>(); }
+        }
+
+        public IRepository<Genre> Genres
+        {
+            get { return this.GetRepository<Genre>(); }
+        }
+
+        public IDeletableEntityRepository<Character> Characters
+        {
+            get { return this.GetDeletableEntityRepository<Character>(); }
+        }
+
+        public IDeletableEntityRepository<CastMember> CastMembers
+        {
+            get { return this.GetDeletableEntityRepository<CastMember>(); }
+        }
+
+        public IRepository<CelebrityMainPhoto> CelebrityMainPhotos
+        {
+            get { return this.GetRepository<CelebrityMainPhoto>(); }
+        }
+
+        public IRepository<MoviePoster> MoviePosters
+        {
+            get { return this.GetRepository<MoviePoster>(); }
+        }
+
         /// <summary>
         /// Saves all changes made in this context to the underlying database.
         /// </summary>
