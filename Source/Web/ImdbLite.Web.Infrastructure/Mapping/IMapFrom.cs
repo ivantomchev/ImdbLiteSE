@@ -1,4 +1,4 @@
-﻿namespace ForumSystem.Web.Infrastructure.Mapping
+﻿namespace ImdbLite.Web.Infrastructure.Mapping
 {
     public interface IMapFrom<T>
     {
